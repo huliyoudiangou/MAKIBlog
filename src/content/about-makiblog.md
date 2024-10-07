@@ -19,8 +19,8 @@ MAKIBlog 是一个简洁、现代的个人博客系统，基于 Next.js 构建�
 
 ## 技术栈
 
-- Next.js
-- React
+- Next.js 14
+- React 18
 - TypeScript
 - Tailwind CSS
 - MDX
@@ -48,26 +48,22 @@ MAKIBlog 是一个简洁、现代的个人博客系统，基于 Next.js 构建�
 
 4. 在浏览器中打开 `http://localhost:3000` 查看博客。
 
-## 部署到 Vercel
+## 部署到 Cloudflare Pages
 
-1. 将项目推送到 GitHub 仓库。
+1. 在 Cloudflare Pages 中创建新项目并连接到您的 GitHub 仓库。
 
-2. 在 Vercel 上创建一个新项目，并连接到您的 GitHub 仓库。
+2. 在构建设置中，设置：
 
-3. 在部署设置中，确保：
+   - 框架预设：`Next.js`
+   - 构建命令：`npm run build`
+   - 构建输出目录：`out`
 
-   - 框架预设选择 "Next.js"
-   - 构建命令为 `next build`
-   - 输出目录为 `.next`
-
-4. 点击 "Deploy" 开始部署。
-
-5. 部署完成后，Vercel 会提供一个 URL，您可以通过该 URL 访问您的博客。
+3. 部署完成后，Cloudflare Pages 会提供一个 URL，您可以通过该 URL 访问您的博客。
 
 ## 自定义
 
 - 文章存放在 `src/content` 目录下，以 Markdown 格式编写。
-- 全局样式可以在 `styles/globals.css` 中修改。
+- 全局样式可以在 `src/styles/globals.css` 中修改。
 - 主题配置可以在 `tailwind.config.js` 中调整。
 
 ## 贡献
