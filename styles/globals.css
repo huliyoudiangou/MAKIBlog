@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-black dark:bg-gray-900 dark:text-white;
+}
+
+/* 确保模式切换按钮始终可见 */
+.mode-toggle-button {
+  @apply visible opacity-100 transition-opacity duration-300 ease-in-out !important;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 针对移动端的额外样式 */
+@media (max-width: 768px) {
+  .mode-toggle-button {
+    @apply text-sm !important;
+  }
+}
+
+/* 添加淡入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 初始化样式，确保按钮在页面加载时就可见 */
+html .mode-toggle-button {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* 隐藏按钮的初始状态，用于无 JavaScript 环境 */
+.mode-toggle-button-init {
+  display: none;
+}
+
+/* 代码块样式 - 只调整亮色主题 */
+.prose pre {
+  @apply bg-blue-50;  /* 使用非常浅的蓝灰色背景 */
+}
