@@ -3,7 +3,7 @@ title: "Navidrome TG Bot"
 date: "2024-12-23"
 ---
 
-# Navidrome TG Bot
+## Navidrome TG Bot
 
 一个基于 jfa-go 开发的 Navidrome 用户管理 Telegram 机器人，支持邀请码注册、用户管理等功能。
 
